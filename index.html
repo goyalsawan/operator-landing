@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operator · From First Task to Private App</title>
+  <meta name="description" content="Hire proven fractional operators who execute on a streak, then launch your private app.">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Main Navigation">
+    <div class="container nav-container">
+      <a href="#" class="brand-mark">Operator</a>
+      <ul class="nav-links">
+        <li><a href="#how-it-works" class="nav-link">Lifecycle</a></li>
+        <li><a href="#simulator" class="nav-link">Simulator</a></li>
+        <li><a href="#comparison" class="nav-link">Comparison</a></li>
+      </ul>
+      <a href="#waitlist" class="btn-primary">Join waitlist</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="preview-pill">Sovereign operator network</span>
+          <h1 id="hero-heading" class="hero-title">From first task to private app.</h1>
+          <p class="hero-lead">Hire proven fractional operators, track streaks, and launch your private app.</p>
+          <div class="hero-actions">
+            <a href="#waitlist" class="btn-primary">Get early access</a>
+          </div>
+          <p class="hero-meta">Private beta opening in Q1. Zero platform lock-in.</p>
+        </div>
+
+        <!-- Desk Hero Preview -->
+        <div class="desk-panel" aria-label="Operator preview card">
+          <div class="operator-sheet">
+            <div class="operator-sheet-header">
+              <div>
+                <div class="operator-name">Alex Chen</div>
+                <div class="operator-title">Fractional Operations Lead</div>
+              </div>
+              <div class="streak-indicator">14-job streak</div>
+            </div>
+
+            <div class="operator-milestones">
+              <div class="milestone-item">
+                <span>Task 01: Audit outbound pipeline</span>
+                <span class="milestone-status">Delivered on-time</span>
+              </div>
+              <div class="milestone-item">
+                <span>Task 02: Stripe billing automation</span>
+                <span class="milestone-status">Delivered on-time</span>
+              </div>
+              <div class="milestone-item">
+                <span>Task 03: Executive sprint planning</span>
+                <span class="milestone-status">Delivered on-time</span>
+              </div>
+            </div>
+
+            <div class="app-unlock-notice">
+              <span>Threshold reached</span>
+              <strong>Active Alex Ops App</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="how-heading" class="section-title">The graduation lifecycle</h2>
+          <p class="section-lead">Traditional platforms trap your relationship. We provide software that rewards maturity.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="feature-card">
+            <span class="card-num">Step 01</span>
+            <h3 class="card-title">The pilot task</h3>
+            <p class="card-desc">Deposit escrow for a defined deliverable. No proposal spam. Test domain execution with zero risk.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="card-num">Step 02</span>
+            <h3 class="card-title">The proof streak</h3>
+            <p class="card-desc">Every on-time delivery builds the operator’s public record. High performers protect their score.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="card-num">Step 03</span>
+            <h3 class="card-title">The private app</h3>
+            <p class="card-desc">At three successful jobs, client and operator graduate into a custom-branded hub.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Simulator Section -->
+    <section id="simulator" class="section" aria-labelledby="sim-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="sim-heading" class="section-title">Streak simulator</h2>
+          <p class="section-lead">See how milestone delivery converts a trial into a sovereign app.</p>
+        </div>
+
+        <div class="simulator-panel">
+          <div class="simulator-controls">
+            <div class="slider-label-group">
+              <label for="task-slider" class="form-label">Completed milestones:</label>
+              <span id="slider-output" class="slider-value">Task 1</span>
+            </div>
+            <input type="range" id="task-slider" class="step-slider" min="1" max="5" value="1" step="1">
+            <p id="slider-explanation" class="card-desc">Initial pilot phase. Platform protects funds in escrow until deliverable sign-off.</p>
+          </div>
+
+          <div class="simulator-display" id="simulator-card">
+            <div class="screen-header">
+              <span class="screen-app-name" id="sim-app-name">Shared Escrow Workroom</span>
+              <span class="screen-status-badge status-pilot" id="sim-badge">Pilot phase</span>
+            </div>
+            <p id="sim-text" class="card-desc">Status: Trial milestone 1 of 3. Building verified on-time record.</p>
+            <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-paper-2); display: flex; justify-content: space-between; font-size: var(--text-xs); color: var(--color-muted);">
+              <span>Operator Fee: <strong id="sim-fee" style="color: var(--color-ink);">12% pilot cut</strong></span>
+              <span>Client Mobile App: <strong id="sim-app-status" style="color: var(--color-ink);">Pending graduation</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section id="comparison" class="section" aria-labelledby="comp-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="comp-heading" class="section-title">Built for real execution</h2>
+          <p class="section-lead">A direct look at how this platform compares to market incumbents.</p>
+        </div>
+
+        <div class="comparison-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">Dimension</th>
+                <th scope="col">Faff</th>
+                <th scope="col">Topmate</th>
+                <th scope="col">Upwork</th>
+                <th scope="col" class="highlight-col">Operator</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Primary scope</th>
+                <td>Life admin chores</td>
+                <td>30-minute advice calls</td>
+                <td>Freelance bidding</td>
+                <td class="highlight-col">High-context execution</td>
+              </tr>
+              <tr>
+                <th scope="row">Relationship</th>
+                <td>Anonymous shift pool</td>
+                <td>One-off mentor session</td>
+                <td>Generic portal freelancer</td>
+                <td class="highlight-col">Dedicated named specialist</td>
+              </tr>
+              <tr>
+                <th scope="row">Interface</th>
+                <td>WhatsApp text chat</td>
+                <td>Video meeting link</td>
+                <td>Clunky web dashboard</td>
+                <td class="highlight-col">Bespoke client app</td>
+              </tr>
+              <tr>
+                <th scope="row">Maturation</th>
+                <td>Static chores</td>
+                <td>Call disconnects</td>
+                <td>Banned if taken offline</td>
+                <td class="highlight-col">Dedicated private portal</td>
+              </tr>
+              <tr>
+                <th scope="row">Long-term fee</th>
+                <td>Monthly subscription</td>
+                <td>Per-session cut</td>
+                <td>10% to 15% tax</td>
+                <td class="highlight-col">Flat tool fee</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="section" aria-labelledby="waitlist-heading">
+      <div class="container">
+        <div class="section-head" style="text-align: center; margin-inline: auto;">
+          <h2 id="waitlist-heading" class="section-title">Request early beta access</h2>
+          <p class="section-lead">Join founders and specialists building sovereign partnerships.</p>
+        </div>
+
+        <div class="waitlist-card">
+          <div class="persona-toggle" role="tablist" aria-label="Role selector">
+            <button type="button" class="toggle-option active" id="btn-role-client" role="tab" aria-selected="true">I want to hire</button>
+            <button type="button" class="toggle-option" id="btn-role-operator" role="tab" aria-selected="false">I am an operator</button>
+          </div>
+
+          <form id="waitlist-form">
+            <div class="form-group">
+              <label for="wl-name" class="form-label">Full name</label>
+              <input type="text" id="wl-name" class="form-input" placeholder="e.g. Maya Lin" required>
+            </div>
+
+            <div class="form-group">
+              <label for="wl-email" class="form-label">Work email</label>
+              <input type="email" id="wl-email" class="form-input" placeholder="name@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="wl-specialty" class="form-label" id="label-specialty">Domain or hiring need</label>
+              <input type="text" id="wl-specialty" class="form-input" placeholder="e.g. Growth, RevOps, Systems" required>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: var(--space-sm);">Join private waitlist</button>
+          </form>
+
+          <div id="waitlist-success" hidden style="margin-top: var(--space-md); padding: var(--space-md); background: var(--color-streak-bg); border-radius: var(--radius-input); color: var(--color-streak); text-align: center; font-size: var(--text-sm);">
+            <strong>Reservation confirmed.</strong> Your position is <span id="waitlist-pos" class="num">#142</span>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discussion Section -->
+    <section id="discussion" class="section" aria-labelledby="discuss-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="discuss-heading" class="section-title">Community feedback</h2>
+          <p class="section-lead">Help steer the roadmap. Share what would make this platform indispensable.</p>
+        </div>
+
+        <div class="discussion-box">
+          <form id="comment-form" class="comment-input-panel">
+            <label for="comment-text" class="form-label">Leave an idea or critique:</label>
+            <textarea id="comment-text" class="comment-textarea" placeholder="What features would you need most?" required></textarea>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <input type="text" id="comment-author" class="form-input" placeholder="Your name" style="max-width: 240px;" required>
+              <button type="submit" class="btn-primary">Post thought</button>
+            </div>
+          </form>
+
+          <div class="comment-list" id="comments-container">
+            <div class="comment-card">
+              <button type="button" class="upvote-btn" data-id="seed-1" aria-label="Upvote comment">
+                <span aria-hidden="true">&#9650;</span>
+                <span class="upvote-count">24</span>
+              </button>
+              <div class="comment-body">
+                <div class="comment-author-row">
+                  <span class="comment-author">David K.</span>
+                  <span class="comment-tag">Founder</span>
+                </div>
+                <p class="comment-text">The branded app concept solves disintermediation. Having a dedicated portal makes staying on-platform feel like an upgrade.</p>
+              </div>
+            </div>
+
+            <div class="comment-card">
+              <button type="button" class="upvote-btn" data-id="seed-2" aria-label="Upvote comment">
+                <span aria-hidden="true">&#9650;</span>
+                <span class="upvote-count">19</span>
+              </button>
+              <div class="comment-body">
+                <div class="comment-author-row">
+                  <span class="comment-author">Sarah M.</span>
+                  <span class="comment-tag">Fractional Lead</span>
+                </div>
+                <p class="comment-text">Make sure streaks pause automatically during client review windows so operators are never penalized for review delays.</p>
+              </div>
+            </div>
+
+            <div class="comment-card">
+              <button type="button" class="upvote-btn" data-id="seed-3" aria-label="Upvote comment">
+                <span aria-hidden="true">&#9650;</span>
+                <span class="upvote-count">15</span>
+              </button>
+              <div class="comment-body">
+                <div class="comment-author-row">
+                  <span class="comment-author">Rohan T.</span>
+                  <span class="comment-tag">Product Lead</span>
+                </div>
+                <p class="comment-text">Please include Slack or WhatsApp notification hooks so teams can respond without opening a browser tab.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-mark">Operator</a>
+        <p class="card-desc">The sovereign operator network. Designed for fractional experts who deliver, and founders who value reliable execution.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <span class="footer-heading">Platform</span>
+          <a href="#how-it-works" class="footer-link">Lifecycle</a>
+          <a href="#simulator" class="footer-link">Simulator</a>
+          <a href="#comparison" class="footer-link">Comparison</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-heading">Community</span>
+          <a href="#waitlist" class="footer-link">Waitlist</a>
+          <a href="#discussion" class="footer-link">Feedback</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>Built with Hallmark. Coral theme.</span>
+      <span>No platform circumvention penalties</span>
+    </div>
+  </footer>
+
+  <script>
+    // Simulator Interactive Logic
+    const slider = document.getElementById('task-slider');
+    const sliderOutput = document.getElementById('slider-output');
+    const sliderExplanation = document.getElementById('slider-explanation');
+    const simAppName = document.getElementById('sim-app-name');
+    const simBadge = document.getElementById('sim-badge');
+    const simText = document.getElementById('sim-text');
+    const simFee = document.getElementById('sim-fee');
+    const simAppStatus = document.getElementById('sim-app-status');
+
+    slider.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value, 10);
+      sliderOutput.textContent = `Task ${val}`;
+
+      if (val < 3) {
+        sliderExplanation.textContent = 'Initial pilot phase. Platform protects funds in escrow until deliverable sign-off.';
+        simAppName.textContent = 'Shared Escrow Workroom';
+        simBadge.className = 'screen-status-badge status-pilot';
+        simBadge.textContent = 'Pilot phase';
+        simText.textContent = `Status: Trial milestone ${val} of 3. Building verified on-time record.`;
+        simFee.textContent = '12% pilot cut';
+        simAppStatus.textContent = 'Pending graduation';
+      } else {
+        sliderExplanation.textContent = 'Threshold reached. The relationship has officially graduated into a dedicated private portal.';
+        simAppName.textContent = 'Alex Chen / Client Portal';
+        simBadge.className = 'screen-status-badge status-graduated';
+        simBadge.textContent = 'Private app active';
+        simText.textContent = `Status: Graduated partner (${val}-job active streak). Direct chat and 1-tap milestone approvals enabled.`;
+        simFee.textContent = 'Flat $29/mo tool fee (0% cut)';
+        simAppStatus.textContent = 'Active on Mobile & Web';
+      }
+    });
+
+    // Persona Toggle
+    const btnClient = document.getElementById('btn-role-client');
+    const btnOperator = document.getElementById('btn-role-operator');
+    const labelSpecialty = document.getElementById('label-specialty');
+    const inputSpecialty = document.getElementById('wl-specialty');
+
+    btnClient.addEventListener('click', () => {
+      btnClient.classList.add('active');
+      btnClient.setAttribute('aria-selected', 'true');
+      btnOperator.classList.remove('active');
+      btnOperator.setAttribute('aria-selected', 'false');
+      labelSpecialty.textContent = 'Domain or hiring need';
+      inputSpecialty.placeholder = 'e.g. Growth, RevOps, Systems';
+    });
+
+    btnOperator.addEventListener('click', () => {
+      btnOperator.classList.add('active');
+      btnOperator.setAttribute('aria-selected', 'true');
+      btnClient.classList.remove('active');
+      btnClient.setAttribute('aria-selected', 'false');
+      labelSpecialty.textContent = 'Primary domain or superpower';
+      inputSpecialty.placeholder = 'e.g. Systems Automations, Full-Stack Ops';
+    });
+
+    // Waitlist Form Submission
+    const waitlistForm = document.getElementById('waitlist-form');
+    const waitlistSuccess = document.getElementById('waitlist-success');
+    const waitlistPos = document.getElementById('waitlist-pos');
+
+    waitlistForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const existingCount = parseInt(localStorage.getItem('operator_wl_count') || '142', 10);
+      const nextNum = existingCount + 1;
+      localStorage.setItem('operator_wl_count', nextNum.toString());
+      waitlistPos.textContent = `#${nextNum}`;
+      waitlistForm.style.display = 'none';
+      waitlistSuccess.hidden = false;
+    });
+
+    // Discussion Board & Upvotes
+    const commentForm = document.getElementById('comment-form');
+    const commentsContainer = document.getElementById('comments-container');
+
+    commentsContainer.addEventListener('click', (e) => {
+      const btn = e.target.closest('.upvote-btn');
+      if (!btn) return;
+      const countSpan = btn.querySelector('.upvote-count');
+      let current = parseInt(countSpan.textContent, 10);
+      if (btn.dataset.voted === 'true') {
+        current -= 1;
+        btn.dataset.voted = 'false';
+        btn.style.borderColor = 'var(--color-rule)';
+      } else {
+        current += 1;
+        btn.dataset.voted = 'true';
+        btn.style.borderColor = 'var(--color-accent-2)';
+      }
+      countSpan.textContent = current;
+    });
+
+    commentForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const author = document.getElementById('comment-author').value.trim();
+      const text = document.getElementById('comment-text').value.trim();
+      if (!author || !text) return;
+
+      const newCard = document.createElement('div');
+      newCard.className = 'comment-card';
+      newCard.innerHTML = `
+        <button type="button" class="upvote-btn" aria-label="Upvote comment">
+          <span aria-hidden="true">&#9650;</span>
+          <span class="upvote-count">1</span>
+        </button>
+        <div class="comment-body">
+          <div class="comment-author-row">
+            <span class="comment-author">${author}</span>
+            <span class="comment-tag">Community Member</span>
+          </div>
+          <p class="comment-text">${text}</p>
+        </div>
+      `;
+      commentsContainer.prepend(newCard);
+      commentForm.reset();
+    });
+  </script>
+</body>
+</html>
