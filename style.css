@@ -787,12 +787,83 @@ button:disabled, input:disabled, textarea:disabled {
   color: var(--color-ink);
 }
 
+/* Roles Grid */
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap-columns);
+}
+
+.role-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.role-tag {
+  font-family: var(--font-outlier);
+  font-size: var(--text-xs);
+  color: var(--color-accent-2);
+  font-weight: 600;
+}
+
+/* FAQ Section */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.faq-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-card);
+  padding: var(--space-md);
+}
+
+.faq-summary {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-ink);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-summary:focus-visible {
+  outline: 2px solid var(--color-focus);
+}
+
+.faq-body {
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-paper-2);
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+  line-height: 1.5;
+}
+
 /* Responsive adjustments */
 @media (max-width: 60rem) {
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
   }
   .cards-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .roles-grid {
     grid-template-columns: minmax(0, 1fr);
   }
   .simulator-panel {
