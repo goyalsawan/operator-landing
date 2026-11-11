@@ -731,17 +731,29 @@ button:disabled, input:disabled, textarea:disabled {
 /* Mobile App Showcase Section */
 .showcase-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: var(--gap-columns);
   align-items: center;
 }
 
+.mobile-mockup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-desk);
+  border: 1px solid var(--color-rule-2);
+  border-radius: var(--radius-card);
+  padding: var(--space-xl);
+}
+
 .mobile-mockup-frame {
+  max-width: 320px;
+  width: 100%;
   border-radius: var(--radius-card);
   overflow: hidden;
   border: 1px solid var(--color-card-border);
-  box-shadow: var(--shadow-card);
-  background: var(--color-paper-2);
+  box-shadow: 0 8px 24px -4px color-mix(in oklab, var(--color-ink) 12%, transparent);
+  background: var(--color-paper);
 }
 
 .mobile-mockup-frame img {
