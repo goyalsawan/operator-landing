@@ -475,6 +475,27 @@
       inputSpecialty.placeholder = 'e.g. Systems Automations, Full-Stack Ops';
     });
 
+    // Webhook endpoint for Google Sheets / Formspree
+    // Paste your Google Apps Script Web App URL below to automatically collect waitlist entries and comments in your Google Sheet!
+    const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbz_REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec";
+
+    async function sendToBackend(payload) {
+      if (!SHEET_ENDPOINT || SHEET_ENDPOINT.includes("REPLACE_WITH_YOUR_DEPLOYMENT_ID")) {
+        console.log("Local submission recorded (Sheet endpoint pending):", payload);
+        return;
+      }
+      try {
+        await fetch(SHEET_ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+      } catch (err) {
+        console.warn("Backend submission error:", err);
+      }
+    }
+
     // Waitlist Form Submission
     const waitlistForm = document.getElementById('waitlist-form');
     const waitlistSuccess = document.getElementById('waitlist-success');
@@ -482,6 +503,21 @@
 
     waitlistForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      const name = document.getElementById('wl-name').value.trim();
+      const email = document.getElementById('wl-email').value.trim();
+      const specialty = document.getElementById('wl-specialty').value.trim();
+      const role = btnClient.classList.contains('active') ? 'Hiring Client' : 'Operator';
+
+      // Send to Google Sheet
+      sendToBackend({
+        type: "waitlist",
+        role: role,
+        name: name,
+        email: email,
+        specialty_or_need: specialty,
+        submitted_at: new Date().toISOString()
+      });
+
       const existingCount = parseInt(localStorage.getItem('operator_wl_count') || '142', 10);
       const nextNum = existingCount + 1;
       localStorage.setItem('operator_wl_count', nextNum.toString());
@@ -516,6 +552,14 @@
       const author = document.getElementById('comment-author').value.trim();
       const text = document.getElementById('comment-text').value.trim();
       if (!author || !text) return;
+
+      // Send comment to Google Sheet
+      sendToBackend({
+        type: "comment",
+        author: author,
+        comment: text,
+        submitted_at: new Date().toISOString()
+      });
 
       const newCard = document.createElement('div');
       newCard.className = 'comment-card';
